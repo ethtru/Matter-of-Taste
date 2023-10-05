@@ -13,6 +13,7 @@ const hbs = exphbs.create({ helpers });
 
 // Inform Express.js which template engine we're using
 app.engine('handlebars', hbs.engine);
+//This is telling express that the view engine is handlebars
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
