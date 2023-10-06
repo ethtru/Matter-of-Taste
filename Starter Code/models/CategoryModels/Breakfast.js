@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const Category = require("../Category");
 
-class Breakfast extends Model {}
+class Breakfast extends Category {}
 
 Breakfast.init(
   {
