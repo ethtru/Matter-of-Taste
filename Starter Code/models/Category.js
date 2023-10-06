@@ -3,43 +3,39 @@ const sequelize = require("../config/connection");
 
 class Category extends Model {}
 
-Category.init (
-    {
+Category.init(
+  {
     id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    dishName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    Category: {
-        type: DataTypes.STRING,
-
+    categoryName: { 
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     Instructions: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [500],
-         },
-     },
-    Ingredients: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [500],
-        },
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 500], 
+      },
     },
- }, 
- {
+    Ingredients: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 500], 
+      },
+    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "recipe",
+    modelName: "category",
   }
 );
 

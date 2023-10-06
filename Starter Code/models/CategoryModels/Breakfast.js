@@ -2,40 +2,44 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const Category = require("../Category");
 
-class Breakfast extends category {}
+class Breakfast extends Model {}
 
-Breakfast.init (
-    {
+Breakfast.init(
+  {
     id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     dishName: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    Category: {
-        type: DataTypes.STRING,
-
+    categoryId: { 
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'Category', 
+        key: 'id', 
+      },
     },
     Instructions: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [500],
-         },
-     },
-    Ingredients: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [500],
-        },
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 500], 
+      },
     },
- }, 
- {
+    Ingredients: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 500], 
+      },
+    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
