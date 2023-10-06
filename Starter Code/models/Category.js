@@ -11,7 +11,15 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    categoryName: { 
+    categoryId: { 
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'Category', 
+        key: 'id', 
+      },
+    },
+    dishName: { 
       type: DataTypes.STRING,
       allowNull: false,
     },
