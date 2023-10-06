@@ -16,12 +16,12 @@ Recipe.init(
       allowNull: false,
     },
     ingredients: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     instructions: {
       //SO THAT STEPS CAN BE LISTED SEQUENTIALLY
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     picture: {
