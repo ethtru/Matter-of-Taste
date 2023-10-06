@@ -1,4 +1,5 @@
 module.exports = {
+  
   // Helper function returns a randomly generated book emoji
   get_emoji: () => {
     const randomNum = Math.random();
