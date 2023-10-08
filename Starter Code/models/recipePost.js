@@ -11,23 +11,14 @@ RecipePost.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
+    name: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    ingredients: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    instructions: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    // Add more fields as needed (e.g., author, category, date, etc.).
   },
   {
     sequelize,
-    timestamps: true, // Enable timestamps (createdAt, updatedAt)
+    timestamps: true, 
     modelName: 'recipe_post',
     freezeTableName: true,
     underscored: true,

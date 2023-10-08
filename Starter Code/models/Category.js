@@ -16,7 +16,7 @@ Category.init(
       allowNull: false,
     },
     type: {
-      type: DataTypes.TEXT,
+      type: DataTypes.ENUM("Dinner", "Breakfast", "Lunch", "Dessert"),
       allowNull: false,
     },
   },
