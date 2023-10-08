@@ -1,16 +1,16 @@
 <section class="container">
-  <h3 class="category-name">{{category.name}}</h3>
+  {{!-- <h3 class="category-name">{{category.dishName}}</h3> --}}
   <!-- If the user is logged in, render the gallery content -->
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}} --}}
   <section class="flex-row justify-center">
-    {{#each category.recipes as |recipe|}}
-    {{> recipe-details}}
+    {{#each categories as |category|}}
+   <h3 class="category-name">{{category.name}}</h3>
     {{/each}}
   </section>
 </section>
 <!-- Otherwise, provide a link to login -->
-{{else}}
+{{!-- {{else}}
 <a href="/login">You must login first to view this page</a>
-{{/if}}
+{{/if}} --}}
 
 {{!-- THIS NEEDS TO COORDINATE WITH THE categories MODEL/ROUTE --}}
