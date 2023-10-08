@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-
 class Category extends Model {}
-
 Category.init(
   {
     id: {
@@ -11,31 +9,9 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    categoryId: { 
-      type: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      references: {
-        model: 'Category', 
-        key: 'id', 
-      },
-    },
-    dishName: { 
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    Instructions: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
-    },
-    Ingredients: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
     },
   },
   {
@@ -46,5 +22,4 @@ Category.init(
     modelName: "category",
   }
 );
-
 module.exports = Category;
