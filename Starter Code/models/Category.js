@@ -11,31 +11,13 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    categoryId: { 
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Category', 
-        key: 'id', 
-      },
-    },
-    dishName: { 
-      type: DataTypes.STRING,
+    name: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    Instructions: {
-      type: DataTypes.STRING,
+    type: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
-    },
-    Ingredients: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
     },
   },
   {
