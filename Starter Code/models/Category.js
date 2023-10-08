@@ -11,32 +11,37 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    categoryId: { 
-      type: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      references: {
-        model: 'Category', 
-        key: 'id', 
-      },
-    },
-    dishName: { 
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    Instructions: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
-    },
-    Ingredients: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 500], 
-      },
-    },
+    }
+    // PER TUTOR THIS WILL PREVENT CATEGORIES FROM BEING PULLED BC IT REFERENCES ITSELF
+    // categoryId: { 
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'Category', 
+    //     key: 'id', 
+    //   },
+    // },
+  //   dishName: { 
+  //     type: DataTypes.STRING,
+  //     allowNull: false,
+  //   },
+  //   Instructions: {
+  //     type: DataTypes.STRING,
+  //     allowNull: false,
+  //     validate: {
+  //       len: [1, 500], 
+  //     },
+  //   },
+  //   Ingredients: {
+  //     type: DataTypes.STRING,
+  //     allowNull: false,
+  //     validate: {
+  //       len: [1, 500], 
+  //     },
+  //   },
   },
   {
     sequelize,

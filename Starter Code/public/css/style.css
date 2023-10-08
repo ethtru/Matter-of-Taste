@@ -1,0 +1,8 @@
+.header {
+    color: black;
+    background: seagreen;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
