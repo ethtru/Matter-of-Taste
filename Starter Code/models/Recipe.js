@@ -20,7 +20,6 @@ Recipe.init(
       allowNull: false,
     },
     instructions: {
-      //SO THAT STEPS CAN BE LISTED SEQUENTIALLY
       type: DataTypes.STRING,
       allowNull: false,
     },

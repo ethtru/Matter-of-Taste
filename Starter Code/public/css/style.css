@@ -1,0 +1,24 @@
+.header {
+    color: black;
+    background: rgb(123, 196, 15);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.home-link {
+
+    color: black;
+    font-size: x-large;
+    padding-right: 20px;
+}
+
+.login-link {
+
+    color: black;
+    font-size: x-large;
+    
+}
+

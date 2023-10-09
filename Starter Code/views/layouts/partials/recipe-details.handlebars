@@ -1,11 +1,9 @@
 <section class="card">
   <a href="/recipe/{{id}}">
-    <header>{{title}}</header>
+    <header>{{name}}</header>
 
     <div class="card-body">
-      <img src="/images/{{filename}}" alt="{{description}}">
-      {{!-- DO WE WANT THIS TO BE USERNAME? --}}
-      <p>By: {{artist}}</p>
+      <img src="/images/{{recipe.picture}}" alt="{{recipe.name}}">
     </div>
   </a>
 </section>
