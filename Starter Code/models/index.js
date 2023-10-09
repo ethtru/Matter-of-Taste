@@ -1,5 +1,6 @@
 const User = require("./User");
 const Recipe = require("./Recipe");
-const Category = require('./Category')
-//ADDED RECIPE VARIABLE AND INCLUDED IT INTO THE EXPORTS
-module.exports = { User, Recipe, Category};
+const Comment = require('./Comment');
+const Rating = require('./Rating');
+
+module.exports = { User, Recipe, Comment, Rating};
