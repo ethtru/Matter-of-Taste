@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-class Category extends Model {}
-Category.init(
+class Rating extends Model {}
+Rating.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -9,8 +9,12 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.TEXT,
+    value: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
@@ -22,4 +26,4 @@ Category.init(
     modelName: "category",
   }
 );
-module.exports = Category;
+module.exports = Rating;

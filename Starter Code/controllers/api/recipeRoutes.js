@@ -11,11 +11,13 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+// Get all recipes by meal classification
 
 // Get a single recipe by ID
 router.get("/:id", async (req, res) => {
   try {
-    const recipe = await Recipe.findByPk(req.params.id);
+    const recipe = await Recipe.findByPk(req.params.id); //route parameter
+    // req.query.id
     if (!recipe) {
       return res.status(404).json({ error: "Recipe not found" });
     }
