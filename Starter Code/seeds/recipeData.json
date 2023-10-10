@@ -1,9 +1,17 @@
 [
     {
         "name": "Caldo Verde",
-        "ingredients": ["Potatoes", "Leeks", "Garlic", "Sausage"],
-        "instructions": ["Peel potatoes", "Chop leeks and garlic", "Sautee sausage"],
+        "ingredients": ["Potatoes", "Leeks", "Garlic", "Sausage", "Olive oil"],
+        "instructions": ["1. Peel potatoes", "2. Chop leeks and garlic", "3. Sautee leeks and garlic in olive oil"],
         "picture": "https://www.seriouseats.com/thmb/T4vpRnJBtEm1S4vbVFHlO8671cw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/caldo-verde-portuguese-potato-kale-soup-recipe-hero-04-80f8258a58694f78a7ad6629ba55f90e.jpg",
         "meal_classification": "Dinner"
+    },
+
+    {
+        "name": "Bacon Egg and Cheese Sandwich",
+        "ingredients": ["Bacon", "Eggs", "American Cheese", "White bread", "Butter"],
+        "instructions": ["1. Cook Bacon according to package instructions", "2. Whip one egg in a bowl", "3. Fry whipped egg in a skillet on medium heat", "4. Add cheese to the egg right before it is finished cooking", "5. Toast white bread and add butter to both pieces", "6. Add bacon, egg, and cheese to the toast"],
+        "picture": "https://www.inthekitchenwithmatt.com/wp-content/uploads/2023/03/bacon-egg-and-cheese-sandwich.webp",
+        "meal_classification": "Breakfast"
     }
 ]

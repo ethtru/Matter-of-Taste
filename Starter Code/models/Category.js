@@ -13,6 +13,10 @@ Category.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    type: {
+      type: DataTypes.ENUM("Dinner", "Breakfast", "Lunch", "Dessert"),
+      allowNull: false,
+    },
   },
   {
     sequelize,

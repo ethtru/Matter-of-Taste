@@ -14,7 +14,7 @@
 <style>
   body {
       font-family: 'Young Serif', serif;
-      background-image: url('https://images.pexels.com/photos/616484/pexels-photo-616484.jpeg?cs=srgb&dl=pexels-lukas-616484.jpg&fm=jpg');
+      background-image: url('https://images.pexels.com/photos/616484/pexels-photo-616484.jpeg?auto=compress&cs=tinysrgb&w=800');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -25,9 +25,9 @@
 
 <body>
   <header class="header">
-    <h1>
-      a Matter of Taste
-    </h1>
+ <h1>
+  Matter of Taste
+ </h1>
     <nav>
     <a href="/" class="home-link">Home</a>
     <!-- If the user is logged in, show a logout button -->
@@ -35,7 +35,7 @@
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
-    <a href="/login" class="login-link">Login</a>
+    <a href="../login" class="login-link">Login</a>
     {{/if}}
   </nav>
   </header>
