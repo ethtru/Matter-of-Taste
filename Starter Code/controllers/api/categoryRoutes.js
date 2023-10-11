@@ -1,3 +1,5 @@
+const router = require('express').Router();
+
 router.get("/categories", async (req, res) => {
   try {
     const categories = await Category.findAll({ raw: true });

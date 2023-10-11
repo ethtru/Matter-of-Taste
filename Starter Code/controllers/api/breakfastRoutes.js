@@ -1,6 +1,6 @@
 const express = require("express");
-const router = express.Router();
-const { Breakfast } = require("../models");
+const router = require('express').Router();
+const { Breakfast } = require("../../models");
 
 // Get all breakfast dishes
 router.get("/", async (req, res) => {
@@ -24,3 +24,5 @@ router.get("/:id", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+module.exports = router;
