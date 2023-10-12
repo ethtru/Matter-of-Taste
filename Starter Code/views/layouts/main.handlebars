@@ -7,51 +7,84 @@
   {{!-- UPDATED TITLE --}}
   <title>Matter of Taste</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Young Serif', serif;
-  }
-</style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-4">
-    <h1>
-      Matter of Taste
-    </h1>
-    {{!-- <label for="userName">User Name:</label>
-<input type="text" id="userName" name="userName">
-    <label for="password">Password:</label>
-<input type="text" id="password" name="password"> --}}
-    <nav>
-    <a href="/">Home</a>
-    <!-- If the user is logged in, show a logout button -->
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
+  <header>
+    <div class="display-flex justify-space-between align-center p-4">
+      <h1>
+        Matter of Taste
+      </h1>
+      {{!-- <label for="userName">User Name:</label>
+      <input type="text" id="userName" name="userName">
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password"> --}}
+
+      <nav>
+        <a href="/">Home</a>
+        <!-- If the user is logged in, show a logout button -->
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <!-- Otherwise, show a link to login -->
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </div>
   </header>
-  <main class="container container-fluid mt-5">
+
+
+
+  <main>
     <div class="columns">
+      <div class = "column"></div>
+      <!-- Breakfast Column-->
+      <div class=" column">
+        <div class="breakfast-section">
+            <div class="image-card">
+              <img src="/assets/images/Breakfast-pic.webp" alt="Breakfast Plate">
+              <h3>Breakfast</h3>
+            </div>
+          </div>
+        
+
+
+
+        <!-- Lunch Column -->
+        <div class="lunch-section">
+          <div class="image-card">
+              <img src="/assets/images/Lunch-pic.jpg" alt="Lunch">
+              <h3>Lunch</h3>
+            </div>
+          </div>
+        </div>
+      
+
+      <!-- Dessert Column -->
       <div class="column">
-        First column
+        <div class="dessert-section">
+          <div class="image-card">
+              <img src="/assets/images/Dessert-pic.jpg" alt="Dessert">
+              <h3>Dessert</h3>
+            </div>
+          </div>
+        
+
+
+        <!-- Dinner Column -->
+        <div class=" dinner-section">
+            <div class="image-card">
+              <img src="/assets/images/Dinner-2-pic.jpg" alt="Dinner">
+              <h3>Dinner</h3>
+            </div>
+        </div>
       </div>
-      <div class="column">
-        Second column
-      </div>
-      <div class="column">
-        Third column
-      </div>
-      <div class="column">
-        Fourth column
-      </div>
+      <div class = "column"></div>
     </div>
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
