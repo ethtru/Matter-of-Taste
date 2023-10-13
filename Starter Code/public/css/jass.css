@@ -19,6 +19,8 @@ html {
  */
 body {
   margin: 0;
+  background-image: url("../assets/images/Project\ 2\ table\ pic.jpg");
+  height: 100vh;
 }
 
 /**
