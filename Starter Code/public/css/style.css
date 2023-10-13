@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Young Serif', serif;
   background-image: url('/assets/images/Project 2 table pic.jpg');
@@ -7,8 +8,6 @@ body {
   background-position: center center;
   height: 100vh;
 }
-
-
 
 /* Add this CSS to your CSS file (e.g., style.css) */
 .image-card {
