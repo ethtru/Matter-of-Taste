@@ -1,13 +1,4 @@
-body {
-    font-family: 'Young Serif', serif;
-    background-image: url('./images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    height: 100vh;
-  }
- 
+
 .header {
     color: black;
     background: rgb(123, 196, 15);
