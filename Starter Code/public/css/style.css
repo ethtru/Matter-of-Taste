@@ -1,6 +1,11 @@
-body{
-  background-image: url("/assets/images/Project 2 table pic.jpg");
-  min-height: 100vh;
+body {
+  font-family: 'Young Serif', serif;
+  background-image: url('/assets/images/Project 2 table pic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  height: 100vh;
 }
 
 /* Add this CSS to your CSS file (e.g., style.css) */
@@ -37,6 +42,29 @@ body{
   margin: 0;
 }
 
+.header {
+    color: black;
+    background: rgb(123, 196, 15);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.home-link {
+
+    color: black;
+    font-size: x-large;
+    padding-right: 20px;
+}
+
+.login-link {
+
+    color: black;
+    font-size: x-large;
+    
+}
 
 
 
