@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Outsourcing</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Recipe Outsourcing</h1>
+    </header>
+    
+    <div class="container">
+        {{#if user}}
+            <p>Welcome, {{user.username}}!</p>
+            <a href="/logout">Logout</a>
+        {{else}}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        {{/if}}
+
+        <h2>Recipes</h2>
+        <div class="recipe-list">
+            {{#each recipes}}
+                <div class="recipe">
+                    <h3>{{this.title}}</h3>
+                    <p>{{this.ingredients}}</p>
+                    <p>{{this.instructions}}</p>
+                    <p>Rating: {{this.rating}}</p>
+                </div>
+            {{/each}}
+        </div>
+
+        {{#if user}}
+            <h2>Add a Recipe</h2>
+            <form action="/addrecipe" method="POST">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="ingredients" placeholder="Ingredients" required></textarea>
+                <textarea name="instructions" placeholder="Instructions" required></textarea>
+                <button type="submit">Add Recipe</button>
+            </form>
+        {{/if}}
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
