@@ -79,7 +79,12 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Invalid Username or Password" });
     }
 
-    res.json({ message: "Logging In" });
+    req.session.save(() => {
+      // req.session.user_id = userData.id;
+      req.session.loggedIn = true;
+      res.json({ message: "Logging In" });
+    });
+
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
