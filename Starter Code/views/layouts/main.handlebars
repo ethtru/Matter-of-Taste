@@ -1,62 +1,78 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{!-- UPDATED TITLE --}}
-  <title>Matter of Taste</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! UPDATED TITLE }}
+    <title>Matter of Taste</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
-</head>
-<body>
-  <nav class="navbar has-background-warning-light" role="navigation" aria-label="main navigation" style="padding: 20px 0;">
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          <h1 class="title is-4 has-text-black margin-down">Matter of Taste</h1>
-        </a>
-      </div>
-      
-      <div class="navbar-end">
-        {{#if loggedIn}}
-        <a class="navbar-item" id="logout"></a>
-          <a href="/" class="button has-background-info">Logout</a>
-        {{else}}
-        <div class="navbar-item">
-          <a href="/login" class="button has-background-info">Login | Signup</a>
+  </head>
+  <body>
+    <nav
+      class="navbar has-background-warning-light"
+      role="navigation"
+      aria-label="main navigation"
+      style="padding: 20px 0;"
+    >
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">
+            <h1 class="title is-4 has-text-black margin-down">Matter of Taste</h1>
+          </a>
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        {{/if}}
-      </div>
-    </div>
 
-    <div class="navbar-end">
+        <div class="navbar-end">
+          {{#if loggedIn}}
+            <a class="navbar-item" id="logout"></a>
+            <a href="/" class="button has-background-info">Logout</a>
+          {{else}}
+            <div class="navbar-item">
+              <a href="/login" class="button has-background-info">Login | Signup</a>
+            </div>
+          {{/if}}
+        </div>
+      </div>
       <div class="navbar-item has-dropdown is-hoverable">
-        {{#if loggedIn}}
+          {{#if loggedIn}}
         <a class="navbar-link">Add a Recipe</a>
-        {{else}}
         <div class="navbar-dropdown">
           <a href="/" class="navbar-item">New Recipe</a>
           <a href="/" class="navbar-item">Edit Recipe</a>
         </div>
-        {{/if}}
+         {{/if}}
       </div>
-    </div>
-  </nav>
-</body>
+    </nav>
 
-  <main class="container container-fluid mt-5">
-    <!-- Render the contents of the sub layout here -->
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-</body>
+    <main class="container container-fluid mt-5">
+      <!-- Render the contents of the sub layout here -->
+      {{{body}}}
+    </main>
+    <footer>
+
+    </footer>
+  </body>
 
 </html>
