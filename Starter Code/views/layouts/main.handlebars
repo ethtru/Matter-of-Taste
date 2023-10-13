@@ -28,30 +28,33 @@
 </head>
 <body>
   <nav class="navbar has-background-warning-light" role="navigation" aria-label="main navigation" style="padding: 20px 0;">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <h1 class="title is-4 margin-down">Matter of Taste</h1>
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          <h1 class="title is-4 has-text-black margin-down">Matter of Taste</h1>
+        </a>
+      </div>
+      
+      <div class="navbar-end">
+        {{#if loggedIn}}
+        <a class="navbar-item" id="logout">Logout</a>
+        {{else}}
+        <div class="navbar-item">
+          <a href="/login" class="button has-background-info">Login | Signup</a>
+        </div>
+        {{/if}}
+      </div>
     </div>
 
-    <div id="navbar" class="navbar-menu">
-      <div class="navbar-start">
-        <!-- Home link -->
-        <a href="/" class="navbar-item">Home</a>
-      </div>
-
-      <div class="navbar-end">
-        <!-- If the user is logged in, show a logout button -->
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
         {{#if loggedIn}}
-        <a href="#" class="navbar-item" id="logout">Logout</a>
+        <a class="navbar-link">Add a Recipe</a>
         {{else}}
-        <!-- Otherwise, show a link to login -->
-        <a href="/login" class="navbar-item">Login</a>
+        <div class="navbar-dropdown">
+          <a href="/add-recipe" class="navbar-item">New Recipe</a>
+          <a href="/edit-recipe" class="navbar-item">Edit Recipe</a>
+        </div>
         {{/if}}
       </div>
     </div>
