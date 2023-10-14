@@ -24,12 +24,13 @@
       class="navbar has-background-warning-light"
       role="navigation"
       aria-label="main navigation"
-      style="padding: 20px 0;"
+      style="padding: 40px 0;"
     >
       <div class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="/">
-            <h1 class="title is-4 has-text-black margin-down">Matter of Taste</h1>
+            {{!-- <h1 class="title is-4 has-text-black margin-down">Matter of Taste</h1> --}}
+            <img src="/images/logo.png" alt="Matter of Taste Logo" class="logo-image">
           </a>
           <a
             role="button"
@@ -46,8 +47,9 @@
 
         <div class="navbar-end">
           {{#if loggedIn}}
-            <a class="navbar-item" id="logout"></a>
-            <a href="/" class="button has-background-info">Logout</a>
+            {{!-- <a class="navbar-item" id="logout"></a> --}}
+            {{!-- DOES THE LOGOUT NEED AN HREF HERE? OR DOES IT NEED TO BE BELOW --}}
+            <a href="#" class="button has-background-info" id="logout">Logout</a>
           {{else}}
             <div class="navbar-item">
               <a href="/login" class="button has-background-info">Login | Signup</a>
@@ -59,9 +61,11 @@
           {{#if loggedIn}}
         <a class="navbar-link">Add a Recipe</a>
         <div class="navbar-dropdown">
-          <a href="/" class="navbar-item">New Recipe</a>
+          <a href="/new-recipe" class="navbar-item">New Recipe</a>
           <a href="/" class="navbar-item">Edit Recipe</a>
         </div>
+        {{!-- HERE? --}}
+        <script src="/js/logout.js"></script>
          {{/if}}
       </div>
     </nav>

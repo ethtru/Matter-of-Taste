@@ -66,6 +66,7 @@ router.delete("/:id", async (req, res) => {
 
 // Login
 router.post("/login", async (req, res) => {
+  console.log('test');
   try {
     const user = await User.findOne({ where: { email: req.body.email } });
 
@@ -87,6 +88,16 @@ router.post("/login", async (req, res) => {
 
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
+  }
+});
+// Logout
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 

@@ -1,7 +1,55 @@
-<form id="new-recipe-form">
+{{!-- <form id="new-recipe-form">
   <textarea name="instructions"></textarea>
   <!-- ... -->
   <button>Submit</button>
 </form>
 
-<script src="./js/new-recipe.js"></script>
+<script src="./js/new-recipe.js"></script> --}}
+
+  <div id="new-recipe-container">
+    <h2>
+      Add your recipe below!
+    </h2>
+    <form class='new-recip-form'>
+      <label for='dish_name'>
+        Dish Name:
+      </label>
+      <br />
+      <textarea id='dish_name' name='dish_name' rows='2' cols='30'>
+        {{name}}
+      </textarea>
+      <br />
+      <label for='ingredients'>
+        Please list ingredients:
+      </label>
+      <br />
+      <textarea id='ingredients' name='ingredients' rows='5' cols='30'>
+        {{ingredients}}
+      </textarea>
+      <br />
+      <label for='instructions'>
+        List the steps for your recipe:
+      </label>
+      <br />
+      <textarea id='instructions' name='instructions' rows='2' cols='30'>
+        {{instructions}}
+      </textarea>
+      <br />
+      <label for="picture">
+        Include a link to the image you want for your recipe:
+      </label>
+      <br>
+      <textarea id='picture' name="picture" id="" cols="30" rows="10">
+        {{picture}}
+      </textarea>
+      <br />
+      <input type='checkbox' id='has_nuts' name='has_nuts' value='true' />
+      <label for='has_nuts'>
+        Check box if this dish contains nuts
+      </label>
+      <br />
+      <button type='submit' value='Submit'>
+        Submit
+      </button>
+    </form>
+  </div>
