@@ -4,6 +4,7 @@ const { Recipe } = require("../../models");
 
 // Get all recipes
 router.get("/", async (req, res) => {
+  console.log("hitting the getall recipes");
   try {
     const recipes = await Recipe.findAll();
     res.json(recipes);
@@ -35,6 +36,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:meal_classification", async (req, res) => {
   const { meal_classification } = req.params;
+  console.log("hitting the categoric recipes", meal_classification);
   if (
     !["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)
   ) {
