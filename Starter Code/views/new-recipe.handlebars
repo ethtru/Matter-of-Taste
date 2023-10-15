@@ -1,3 +1,89 @@
+
+  {{!-- //New Recipe Form --}}
+  <div id="new-recipe-container" class="section">
+    <h2 class="title is-4">
+        Add your recipe below!
+    </h2>
+    <form class="new-recipe-form">
+        <div class="field">
+            <label for='user_name' class="label">
+                Please enter your user name:
+            </label>
+            <div class="control">
+                <textarea id='user_name' name='user_name' class="textarea" rows='1' cols='30'>
+                    {{user_name}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for='name' class="label">
+                Dish Name:
+            </label>
+            <div class="control">
+                <textarea id='name' name='name' class="textarea" rows='1' cols='30'>
+                    {{dish_name}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for='ingredients' class="label">
+                Please list ingredients:
+            </label>
+            <div class="control">
+                <textarea id='ingredients' name='ingredients' class="textarea" rows='10' cols='30'>
+                    {{ingredients}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for='instructions' class="label">
+                List the steps for your recipe:
+            </label>
+            <div class="control">
+                <textarea id='instructions' name='instructions' class="textarea" rows='10' cols='30'>
+                    {{instructions}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="picture" class="label">
+                Include a link to the image you want for your recipe:
+            </label>
+            <div class="control">
+                <textarea id='picture' name="picture" class="textarea" rows="1" cols="30">
+                    {{picture}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for='meal_classification' class="label">
+                Select the meal category for your recipe:
+            </label>
+            <div class="control">
+                <div class="select">
+                    <select id="meal-classification">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <button type='submit' value='Submit' class="button is-info">
+                    Submit
+                </button>
+            </div>
+        </div>
+
 {{! //New Recipe Form }}
 <div id="new-recipe-container">
   <h2>
@@ -59,6 +145,7 @@
       Submit
     </button>
   </form>
+
 </div>
 
 <script src="js/new-recipe.js"></script>
