@@ -35,55 +35,55 @@ router.get("/:meal_classification", async (req, res) => {
 
 // Get Breakfast
 
-router.get("/breakfast", async (req, res) => {
-  try {
-    const breakfastRecipes = await Recipe.findAll({
-      where: { meal_classification: "Breakfast" },
-    });
-    res.json(breakfastRecipes);
-  } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
+// router.get("/breakfast", async (req, res) => {
+//   try {
+//     const breakfastRecipes = await Recipe.findAll({
+//       where: { meal_classification: "Breakfast" },
+//     });
+//     res.json(breakfastRecipes);
+//   } catch (error) {
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// });
 
-// Get Lunch
+// // Get Lunch
 
-router.get("/lunch", async (req, res) => {
-  try {
-    const lunchRecipes = await Recipe.findAll({
-      where: { meal_classification: "Lunch" },
-    });
-    res.json(lunchRecipes);
-  } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
+// router.get("/lunch", async (req, res) => {
+//   try {
+//     const lunchRecipes = await Recipe.findAll({
+//       where: { meal_classification: "Lunch" },
+//     });
+//     res.json(lunchRecipes);
+//   } catch (error) {
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// });
 
-// Get Dinner
+// // Get Dinner
 
-router.get("/dessert", async (req, res) => {
-  try {
-    const dessertRecipes = await Recipe.findAll({
-      where: { meal_classification: "Dessert" },
-    });
-    res.json(dessertRecipes);
-  } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
+// router.get("/dessert", async (req, res) => {
+//   try {
+//     const dessertRecipes = await Recipe.findAll({
+//       where: { meal_classification: "Dessert" },
+//     });
+//     res.json(dessertRecipes);
+//   } catch (error) {
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// });
 
-// Get Dessert
+// // Get Dessert
 
-router.get("/dinner", async (req, res) => {
-  try {
-    const dinnerRecipes = await Recipe.findAll({
-      where: { meal_classification: "Dinner" },
-    });
-    res.json(dinnerRecipes);
-  } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
+// router.get("/dinner", async (req, res) => {
+//   try {
+//     const dinnerRecipes = await Recipe.findAll({
+//       where: { meal_classification: "Dinner" },
+//     });
+//     res.json(dinnerRecipes);
+//   } catch (error) {
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// });
 
 // Get a single recipe by ID
 
