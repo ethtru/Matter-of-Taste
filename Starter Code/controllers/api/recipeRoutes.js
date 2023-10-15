@@ -13,21 +13,38 @@ router.get("/", async (req, res) => {
 });
 // Get all recipes by meal classification
 
+// router.get("/:meal_classification", async (req, res) => {
+//   const { meal_classification } = req.params;
+
+//   if (
+//     !["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)
+//   ) {
+//     return res.status(400).json({ message: "Incorrect meal type" });
+//   }
+
+//   try {
+//     const recipes = await Recipe.findAll({
+//       where: { meal_classification },
+//     });
+
+//     res.json(recipes);
+//   } catch (error) {
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// });
+
 router.get("/:meal_classification", async (req, res) => {
   const { meal_classification } = req.params;
-
   if (
     !["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)
   ) {
     return res.status(400).json({ message: "Incorrect meal type" });
   }
-
   try {
     const recipes = await Recipe.findAll({
       where: { meal_classification },
     });
-
-    res.json(recipes);
+    res.render(`${meal_classification.toLowerCase()}-recipes`, { recipes });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
