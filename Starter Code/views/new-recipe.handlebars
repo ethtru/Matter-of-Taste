@@ -4,11 +4,19 @@
       Add your recipe below!
     </h2>
     <form class='new-recipe-form'>
-      <label for='dish_name'>
+      <label for='user_name'>
+        Please enter your user name:
+      </label>
+      <br>
+         <textarea id='user_name' name='user_name' rows='2' cols='30'>
+        {{user.name}}
+      </textarea>
+      <br>
+      <label for='name'>
         Dish Name:
       </label>
       <br />
-      <textarea id='dish_name' name='dish_name' rows='2' cols='30'>
+      <textarea id='name' name='name' rows='2' cols='30'>
         {{name}}
       </textarea>
       <br />
