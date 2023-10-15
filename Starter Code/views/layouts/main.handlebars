@@ -59,11 +59,14 @@
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
           {{#if loggedIn}}
-        <a class="navbar-link">Add a Recipe</a>
+        {{!-- <a class="navbar-link">Add a Recipe</a>
         <div class="navbar-dropdown">
           <a href="/new-recipe" class="navbar-item">New Recipe</a>
-          <a href="/" class="navbar-item">Edit Recipe</a>
+        </div> --}}
+        <div class="navbar-button">
+         <a href="/new-recipe" class="navbar-item">Add Recipe</a>
         </div>
+
         {{!-- HERE? --}}
         <script src="/js/logout.js"></script>
          {{/if}}
