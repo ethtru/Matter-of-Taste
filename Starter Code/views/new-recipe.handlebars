@@ -1,64 +1,64 @@
-  {{!-- //New Recipe Form --}}
-  <div id="new-recipe-container">
-    <h2>
-      Add your recipe below!
-    </h2>
-    <form class='new-recipe-form'>
-      <label for='user_name'>
-        Please enter your user name:
-      </label>
-      <br>
-         <textarea id='user_name' name='user_name' rows='2' cols='30'>
-        {{user.name}}
-      </textarea>
-      <br>
-      <label for='name'>
-        Dish Name:
-      </label>
-      <br />
-      <textarea id='name' name='name' rows='2' cols='30'>
-        {{name}}
-      </textarea>
-      <br />
-      <label for='ingredients'>
-        Please list ingredients:
-      </label>
-      <br />
-      <textarea id='ingredients' name='ingredients' rows='10' cols='30'>
-        {{ingredients}}
-      </textarea>
-      <br />
-      <label for='instructions'>
-        List the steps for your recipe:
-      </label>
-      <br />
-      <textarea id='instructions' name='instructions' rows='10' cols='30'>
-        {{instructions}}
-      </textarea>
-      <br />
-      <label for="picture">
-        Include a link to the image you want for your recipe:
-      </label>
-      <br>
-      <textarea id='picture' name="picture" id="" cols="30" rows="2">
-        {{picture}}
-      </textarea>
-      <br />
-      <label for='meal_classification'>
-        Select the meal category for your recipe:
-      </label>
-      <select id="meal-classification">
+{{! //New Recipe Form }}
+<div id="new-recipe-container">
+  <h2>
+    Add your recipe below!
+  </h2>
+  <form class="new-recipe-form">
+    <label for="user_name">
+      Please enter your user name:
+    </label>
+    <br />
+    <textarea id="user_name" name="user_name" rows="2" cols="30">
+      {{user.name}}
+    </textarea>
+    <br />
+    <label for="dish_name">
+      Dish Name:
+    </label>
+    <br />
+    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+      {{name}}
+    </textarea>
+    <br />
+    <label for="ingredients">
+      Please list ingredients:
+    </label>
+    <br />
+    <textarea id="ingredients" name="ingredients" rows="10" cols="30">
+      {{ingredients}}
+    </textarea>
+    <br />
+    <label for="instructions">
+      List the steps for your recipe:
+    </label>
+    <br />
+    <textarea id="instructions" name="instructions" rows="10" cols="30">
+      {{instructions}}
+    </textarea>
+    <br />
+    <label for="picture">
+      Include a link to the image you want for your recipe:
+    </label>
+    <br />
+    <textarea id="picture" name="picture" id="" cols="30" rows="2">
+      {{picture}}
+    </textarea>
+    <br />
+    <label for="meal_classification">
+      Select the meal category for your recipe:
+    </label>
+    <select id="meal-classification">
       <option value="breakfast">Breakfast</option>
       <option value="lunch">Lunch</option>
       <option value="dinner">Dinner</option>
       <option value="dessert">Dessert</option>
       {{meal-classification}}
-      </select> 
-      <br />
-      <button type='submit' value='Submit'>
-        Submit
-      </button>
-    </form>
-  </div>
+    </select>
+    <br />
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>
 
-  <script src="js/new-recipe.js"></script>
+<script src="js/new-recipe.js"></script>
