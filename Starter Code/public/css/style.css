@@ -6,10 +6,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  height: 100vh;
+  height: 150vh;
 }
 
-/* Add this CSS to your CSS file (e.g., style.css) */
 .image-card {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -64,13 +63,38 @@ body {
 
     color: black;
     font-size: x-large;
-    
 }
 
-/* .logo-image {
-  
-} */
+.breakfast-section {
+  width: 200px; 
+  height: 150px; 
+  object-fit: cover; 
+}
 
+.Lunch-section {
+  width: 200px; 
+  height: 150px; 
+  object-fit: cover; 
+}
 
+.Dessert-section {
+  width: 200px; 
+  height: 150px; 
+  object-fit: cover; 
+}
 
+.Dinner-section {
+  width: 200px; 
+  height: 150px; 
+  object-fit: cover; 
+}
 
+.logo-image {
+  width: 150px;
+  height: 50px;
+  object-fit: cover; 
+}
+
+.custom-transparent-banner {
+  background-color: transparent;
+}
