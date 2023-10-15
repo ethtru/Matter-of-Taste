@@ -3,7 +3,7 @@ const { User, Recipe, Category } = require("../models");
 
 const userData = require("./userData.json");
 const recipeData = require("./recipeData.json");
-const categoryData = require("./category.json");
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -16,10 +16,7 @@ const seedDatabase = async () => {
     //DO WE NEED THIS RETURNING TRUE?
     returning: true,
   });
-  await Category.bulkCreate(categoryData, {
-    //DO WE NEED THIS RETURNING TRUE?
-    returning: true,
-  });
+ 
 
   process.exit(0);
 };
