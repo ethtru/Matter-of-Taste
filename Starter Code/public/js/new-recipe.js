@@ -22,6 +22,7 @@ document.querySelector(".new-recipe-form").onsubmit = async (e) => {
   console.log("form submitted");
   e.preventDefault();
   // Get values from form inputs
+  const user_name = document.querySelector("#user_name").value;
   const name = document.querySelector("#dish_name").value;
   const ingredients = document.querySelector("#ingredients").value;
   const instructions = document.querySelector("#instructions").value;

@@ -35,7 +35,9 @@ router.get("/", async (req, res) => {
 
 router.get("/:meal_classification", async (req, res) => {
   const { meal_classification } = req.params;
-  if (!["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)) {
+  if (
+    !["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)
+  ) {
     return res.status(400).json({ message: "Incorrect meal type" });
   }
   try {
