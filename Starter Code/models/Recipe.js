@@ -31,6 +31,14 @@ Recipe.init(
       //THIS PRESENTS THE ONLY CATEGORIES THAT CAN BE SELECTED
       type: DataTypes.ENUM("Dinner", "Lunch", "Breakfast", "Dessert"),
     },
+
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "",
+    //     key: "",
+    //   },
+    // },
   },
   {
     sequelize,

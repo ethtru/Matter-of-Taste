@@ -17,7 +17,9 @@
 
 //   console.log("Recipe created!");
 // };
+
 document.querySelector(".new-recipe-form").onsubmit = async (e) => {
+  console.log("form submitted");
   e.preventDefault();
   // Get values from form inputs
   const name = document.querySelector("#dish_name").value;
@@ -34,7 +36,7 @@ document.querySelector(".new-recipe-form").onsubmit = async (e) => {
     picture,
     meal_classification,
   };
-  const response = await fetch("/api/recipes", {
+  const response = await fetch("/api/recipe", {
     method: "POST",
     credentials: "include",
     headers: {

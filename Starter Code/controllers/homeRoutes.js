@@ -25,7 +25,7 @@ router.get("/new-recipe", (req, res) => {
   //   res.redirect("/");
   //   return;
   // }
-  res.render("new-recipe");
+  res.render("new-recipe", { loggedIn: !!req.session.loggedIn });
 });
 
 module.exports = router;
