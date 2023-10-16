@@ -1,26 +1,28 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Dinner Recipes</title>
-  </head>
-  <body>
-    <h1>Dinner Recipes</h1>
-    <ul>
-      {{#each recipes as |recipe|}}
-        <section class="card">
-          <a href="/api/recipe/{{this.dataValues.id}}">
-            <header>{{this.dataValues.name}}</header>
-
-            <div class="card-body">
-              <img
-                src="{{this.dataValues.picture}}"
-                alt="{{this.dataValues.name}}"
-              />
+</head>
+<body>
+    <h1 class="title is-2">Dinner Recipes</h1>
+    <div class="columns is-multiline">
+        {{#each recipes as |recipe|}}
+            <div class="column is-4"> <!-- Adjust the column size as per your layout -->
+                <div class="card">
+                    <a href="/api/recipe/{{this.dataValues.id}}">
+                        <header class="card-header">
+                            <p class="card-header-title" style="color: white;">{{this.dataValues.name}}</p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{this.dataValues.picture}}" alt="{{this.dataValues.name}}">
+                            </figure>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </a>
-        </section>
-      {{/each}}
-    </ul>
-
-  </body>
+        {{/each}}
+    </div>
+</body>
 </html>
 <script src="/views/api/recipesApi.js"></script>
