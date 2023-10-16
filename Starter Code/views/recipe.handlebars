@@ -1,15 +1,18 @@
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <section class="recipe">
-    {{!-- BELOW NEEDS TO BEUPDATED TO REFLECT RECIPES RATHER THAN PAINTINGS --}}
-  <img src="/images/{{recipe.picture}}" alt="{{recipe.name}}">
+  {{! BELOW NEEDS TO BEUPDATED TO REFLECT RECIPES RATHER THAN PAINTINGS }}
+  <img
+    src="/images/{{recipe.dataValues.picture}}"
+    alt="{{this.dataValues.name}}"
+  />
   <div class="recipe-details">
-    <h3>{{recipe.name}}</h3>
-  {{!-- // DO WE WANT AN AUTHOR/USER ID FIELD? --}}
+    <h3>{{recipe.dataValues.recipe.name}}</h3>
+    {{! // DO WE WANT AN AUTHOR/USER ID FIELD? }}
     <p>By: {{recipe.author}}</p>
-    <p>Ingredients: {{recipe.ingredients}}</p>
-    <p>Instructions: {{recipe.instructions}}</p>
+    <p>Ingredients: {{this.dataValues.ingredients}}</p>
+    <p>Instructions: {{this.dataValues.instructions}}</p>
   </div>
 </section>
-{{else}}
+{{!-- {{else}}
 <a href="/login">You must login first to view this page</a>
-{{/if}}
+{{/if}} --}}

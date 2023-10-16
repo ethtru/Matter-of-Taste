@@ -4,6 +4,7 @@ const { Recipe } = require("../../models");
 
 // Get all recipes
 router.get("/", async (req, res) => {
+  console.log("hitting the getall recipes");
   try {
     const recipes = await Recipe.findAll();
     res.json(recipes);
@@ -33,8 +34,9 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
-router.get("/:meal_classification", async (req, res) => {
+router.get("/meal/:meal_classification", async (req, res) => {
   const { meal_classification } = req.params;
+  console.log("hitting the categoric recipes", meal_classification);
   if (
     !["Breakfast", "Lunch", "Dessert", "Dinner"].includes(meal_classification)
   ) {
@@ -44,6 +46,7 @@ router.get("/:meal_classification", async (req, res) => {
     const recipes = await Recipe.findAll({
       where: { meal_classification },
     });
+    console.log("we got the recipes!", recipes, meal_classification);
     res.render(`${meal_classification.toLowerCase()}-recipes`, { recipes });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -111,7 +114,8 @@ router.get("/:id", async (req, res) => {
     if (!recipe) {
       return res.status(404).json({ message: "Recipe not found" });
     }
-    res.json(recipe);
+    console.log("recipe", recipe);
+    res.render("recipe", { recipe });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }

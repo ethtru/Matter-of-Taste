@@ -1,15 +1,26 @@
-<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Dessert Recipes</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Dessert Recipes</h1>
     <ul>
-        {{#each recipes}}
-            {{> recipe-details}} 
-        {{/each}}
+      {{#each recipes as |recipe|}}
+        <section class="card">
+          <a href="/api/recipe/{{this.dataValues.id}}">
+            <header>{{this.dataValues.name}}</header>
+
+            <div class="card-body">
+              <img
+                src="/images/{{this.dataValues.picture}}"
+                alt="{{this.dataValues.name}}"
+              />
+            </div>
+          </a>
+        </section>
+      {{/each}}
     </ul>
-</body>
+
+  </body>
 </html>
-<script src="../views/api/recipesApi.js"></script> 
+<script src="/views/api/recipesApi.js"></script>

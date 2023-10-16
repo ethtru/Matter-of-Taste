@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, TEXT } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Recipe extends Model {}
@@ -16,11 +16,11 @@ Recipe.init(
       allowNull: false,
     },
     ingredients: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     instructions: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     picture: {
@@ -29,8 +29,11 @@ Recipe.init(
     },
     meal_classification: {
       //THIS PRESENTS THE ONLY CATEGORIES THAT CAN BE SELECTED
-      type: DataTypes.ENUM("Dinner", "Lunch", "Breakfast", "Dessert"),
+      type: DataTypes.STRING,
     },
+   content:{
+    type: TEXT('long')
+   }
 
     // user_id: {
     //   type: DataTypes.INTEGER,
