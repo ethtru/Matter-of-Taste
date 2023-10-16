@@ -31,9 +31,9 @@ Recipe.init(
       //THIS PRESENTS THE ONLY CATEGORIES THAT CAN BE SELECTED
       type: DataTypes.STRING,
     },
-   content:{
-    type: TEXT('long')
-   }
+    content: {
+      type: TEXT("long"),
+    },
 
     // user_id: {
     //   type: DataTypes.INTEGER,

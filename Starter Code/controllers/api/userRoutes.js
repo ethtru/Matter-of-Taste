@@ -66,7 +66,7 @@ router.delete("/:id", async (req, res) => {
 
 // Login
 router.post("/login", async (req, res) => {
-  console.log('test');
+  console.log("test");
   try {
     const user = await User.findOne({ where: { email: req.body.email } });
 
@@ -81,11 +81,10 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
-      // req.session.user_id = userData.id;
+      req.session.userId = user.id;
       req.session.loggedIn = true;
       res.json({ message: "Logging In" });
     });
-
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
@@ -117,7 +116,7 @@ router.post("/", async (req, res) => {
     }
 
     // Create a new user
-    const newUser = await User.create({ name:username, email, password });
+    const newUser = await User.create({ name: username, email, password });
 
     res.status(201).json(newUser);
   } catch (error) {

@@ -1,7 +1,6 @@
-// // Define a function to render the recipes
 // function renderRecipes(recipes) {
 //   const recipeList = document.getElementById("recipe-list");
-//   recipeList.innerHTML = ""; // Clear any previous content
+//   recipeList.innerHTML = "";
 
 //   recipes.forEach((recipe) => {
 //     const recipeItem = document.createElement("div");
