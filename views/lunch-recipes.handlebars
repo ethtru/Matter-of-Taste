@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>Dessert Recipes</title>
+    <title>Lunch Recipes</title>
   </head>
   <body>
-    <h1>Dessert Recipes</h1>
+    <h1>Lunch Recipes</h1>
     <ul>
       {{#each recipes as |recipe|}}
         <section class="card">
@@ -12,7 +12,7 @@
 
             <div class="card-body">
               <img
-                src="/images/{{this.dataValues.picture}}"
+                src="{{this.dataValues.picture}}"
                 alt="{{this.dataValues.name}}"
               />
             </div>
