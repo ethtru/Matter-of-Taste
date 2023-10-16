@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Recipe } = require("../../models");
+const { Recipe, User } = require("../../models");
 
 // Get all recipes
 router.get("/", async (req, res) => {
@@ -109,12 +109,16 @@ router.get("/meal/:meal_classification", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const recipe = await Recipe.findByPk(req.params.id); //route parameter
+    const recipe = await Recipe.findByPk(req.params.id, {
+      raw: true,
+      nest: true,
+      include: "user",
+    }); //route parameter
     // req.query.id
     if (!recipe) {
       return res.status(404).json({ message: "Recipe not found" });
     }
-    console.log("recipe", recipe);
+    console.log("recipe: ", recipe);
     res.render("recipe", { recipe });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -125,7 +129,10 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const newRecipe = await Recipe.create(req.body);
+    const newRecipe = await Recipe.create({
+      ...req.body,
+      user_id: req.session.userId,
+    });
     res.status(201).json(newRecipe);
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });

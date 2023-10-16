@@ -1,16 +1,13 @@
 {{!-- {{#if loggedIn}} --}}
 <section class="recipe">
   {{! BELOW NEEDS TO BEUPDATED TO REFLECT RECIPES RATHER THAN PAINTINGS }}
-  <img
-    src="/images/{{recipe.dataValues.picture}}"
-    alt="{{this.dataValues.name}}"
-  />
+  <img src="{{recipe.picture}}" alt="{{recipe.name}}" />
   <div class="recipe-details">
-    <h3>{{recipe.dataValues.recipe.name}}</h3>
+    <h3>{{recipe.name}}</h3>
     {{! // DO WE WANT AN AUTHOR/USER ID FIELD? }}
-    <p>By: {{recipe.author}}</p>
-    <p>Ingredients: {{this.dataValues.ingredients}}</p>
-    <p>Instructions: {{this.dataValues.instructions}}</p>
+    <p>By: {{recipe.user.name}}</p>
+    <p>Ingredients: {{recipe.ingredients}}</p>
+    <p>Instructions: {{recipe.instructions}}</p>
   </div>
 </section>
 {{!-- {{else}}
