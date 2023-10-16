@@ -1,26 +1,25 @@
-<html>
-  <head>
-    <title>Breakfast Recipes</title>
-  </head>
-  <body>
-    <h1>Breakfast Recipes</h1>
-    <ul>
-      {{#each recipes as |recipe|}}
-        <section class="card">
-          <a href="/api/recipe/{{this.dataValues.id}}">
-            <header>{{this.dataValues.name}}</header>
-
-            <div class="card-body">
-              <img
-                src="/images/{{this.dataValues.picture}}"
-                alt="{{this.dataValues.name}}"
-              />
+<div class="columns is-multiline">
+  {{#each recipes}}
+    <div class="column is-one-third">
+      <a href="/full-recipe/{{id}}"> <!-- Link to the full recipe page -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{{picture}}" alt="Recipe Image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{name}}</p>
+            <p class="subtitle is-6">By {{user_name}}</p>
+            <div class="content">
+              <p>{{ingredients}}</p>
+              <p>{{instructions}}</p>
             </div>
-          </a>
-        </section>
-      {{/each}}
-    </ul>
+          </div>
+        </div>
+      </a>
+    </div>
+  {{/each}}
+</div>
 
-  </body>
-</html>
 <script src="/views/api/recipesApi.js"></script>
